@@ -1,0 +1,161 @@
+
+body {
+  background-image: url(http://f.cl.ly/items/3C0W1n1t1s0P1Z0w131r/background.png);
+  background-repeat: repeat;
+  margin: auto;
+  font-family: sans-serif;
+}
+header {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(195,195,195);
+}
+.nav ul {
+  list-style-type: none;
+  margin: auto;
+
+}
+.nav-li {
+  display: inline-block;
+
+}
+.nav-li-right {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+}
+.sign-up-button {
+  background-color: rgb(54, 74, 176);
+  color: white;
+  border-width: medium;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  width: 60px;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+  text-shadow: .5px 1px rgb(84,84,84);
+}
+.contact-us {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-width: medium;
+  border-radius: 5px;
+  color: white;
+  background-color: inherit;
+  text-shadow: .5px 1px rgb(84, 84, 84);
+}
+.about-acme {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-width: medium;
+  border-radius: 5px;
+  color: white;
+  background-color: inherit;
+  text-shadow: .5px 1px rgb(84, 84, 84);
+}
+main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 60%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #949599;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #949599;
+  overflow: auto;
+}
+.form ul {
+  list-style-type: none;
+  padding-left: 0px;
+
+}
+.form-fields {
+  color: grey;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: rgb(219,155,167);
+  border-width: thin;
+  box-shadow: 0px 0px 10px rgb(200, 250, 248);
+  
+}
+.form-li {
+  padding: 5px;
+}
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  max-width: 60%;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #949599;
+  border-top: solid 1px #949599;
+}
+
+.button-details {
+ bottom: 0px;
+ left: 20px;
+ border-color: blue;
+ border-radius: 5px;
+ background-color: white;
+ color: blue;
+ border-width: thin;
+}
+.button-cart {
+  bottom: 0px;
+  left: 80px;
+  background-color: blue;
+  border-radius: 5px;
+  border-color: blue;
+  color: white;
+  border-width: thin;
+}
+
+.prd-row{
+  display: inline-block;
+  margin-left: 20px;
+  height: 200px;
+}
+.prd-img{
+  display: inline-block;
+}
+
+.prd-desc {
+  display: inline-block;
+  margin-left: 20px;
+}
+.prd-desc-p {
+  width: 400px;
+
+}
+.batman {
+  width: 200px;
+  height: 150px;
+}
+.sugar {
+  width: 200px;
+  height: 150px;
+}
+.pills {
+  width: 200px;
+  height: 150px;
+}
+.logo {
+  height: 50px;
+  width: 200px;
+}
