@@ -85,19 +85,29 @@ main {
 }
 .form-fields {
   color: grey;
-  border-radius: 3px;
+  border-radius: 2px;
   border-style: solid;
-  border-color: rgb(219,155,167);
   border-width: thin;
-  box-shadow: 0px 0px 10px rgb(200, 250, 248);
-}
-.form-fields input:valid {
-  border-style: none;
-  border-color: green;
-  border-width: thin;
+  box-shadow: 0px 0px 5px rgb(112, 147, 224);
 }
 .form-li {
   padding: 5px;
+}
+input:valid {
+  outline-style: none;
+  border-color: green;
+}
+input:invalid {
+  outline-style: none;
+  border-color: red;
+}
+input:valid:focus {
+  outline-style: none;
+  border-color: black;
+}
+input:invalid:focus {
+  outline-style: none;
+  border-color: black;
 }
 footer {
   margin-left: auto;
