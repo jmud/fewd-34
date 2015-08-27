@@ -52,6 +52,7 @@ body { font-family: sans-serif; }
   </p>
 
   <div id="image">
+
   </div>
 
   <script>
@@ -61,12 +62,25 @@ body { font-family: sans-serif; }
   //  2. prompt for width (& assign result to var)
   //  3. prompt for height (& assign result to var)
   //  4. create img element                           --> var img = document.createElement('img')
-  //  5. set img's src attribute                      --> img.setAttribute(?, ?)
+  //  5. set img's src attribute                      --> img.setAttribute("src", "http://....")
   //  6. set img's width attribute
   //  7. set img's height attribute
   //  8. append img to element identified as #image
   //     8.1. assign element with selector "#image" to var
   //     8.2. append img to that element
+
+    var url = prompt("Insert your source url for the image");
+    var width = prompt("How many pixels wide do you want your image to be? (numbers only please)");
+    var height = prompt("How many pixels high? (numbers only please)");
+
+    var img = document.createElement("img");
+    img.setAttribute("src",url);
+    img.setAttribute("width",width);
+    img.setAttribute("height",height);
+
+    var div = document.querySelector("#image");
+    div.appendChild(img);
+
   }
   </script>
 </div>
@@ -91,6 +105,8 @@ body { font-family: sans-serif; }
     //  2. set the element's class attribute to "bold"
     //  - or -
     //  2. add the class "bold" using the element's classList
+    var p = document.querySelector("#make-me-bold");
+    p.setAttribute("class","bold");
   }
   </script>
 </div>
