@@ -115,8 +115,8 @@
     function formSubmitted(event){
       event.preventDefault;
       var query = document.querySelector("#query").value;
-      var formUrl = "http://omdbapi.com/?s=" + query;
-      $.get(formUrl,results);
+      var url = "http://omdbapi.com/?s=" + query;
+      $.get(url,results);
     }
 
     function results(result){
@@ -133,8 +133,8 @@
       link.textContent = movie["Title"];
       release.textContent = movie["Year"];
 
-      var movieUrl = "http://www.imdb.com/title/" + movie["imdbID"];
-      link.setAttribute("href", movieUrl);
+      var url = "http://www.imdb.com/title/" + movie["imdbID"];
+      link.setAttribute("href", url);
       link.setAttribute("target", "_blank");
 
       item.classList.add("movie");
