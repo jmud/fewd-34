@@ -113,7 +113,7 @@
     form.addEventListener("submit",formSubmitted);
 
     function formSubmitted(event){
-      event.preventDefault;
+      event.preventDefault();
       var query = document.querySelector("#query").value;
       var url = "http://omdbapi.com/?s=" + query;
       $.get(url,results);
