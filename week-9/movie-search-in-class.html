@@ -83,7 +83,6 @@
         <input type="text" id="query" placeholder="Movie title">
         <button type="submit">Search</button>
       </form>
-
       <ul id="movies">
         <!--li class="movie">
           <div class="movie-title">
@@ -108,21 +107,22 @@
       ]
     }
 
-    // Your code here!
+// event listener for when user submits the form (enter)
     var form = document.querySelector("#movie-search-form");
     form.addEventListener("submit",formSubmitted);
-
+// gets the text from the input on the form and appends it to the url for omdb. then the get function takes the whole URL to find the results.
     function formSubmitted(event){
       event.preventDefault();
       var query = document.querySelector("#query").value;
       var url = "http://omdbapi.com/?s=" + query;
       $.get(url,results);
     }
-
+// forEach function reaches into Array of results
     function results(result){
       result["Search"].forEach(displayMovie);
     }
 
+// dom manipulation function.
     function displayMovie(movie){
 
       var item = document.createElement("li");
@@ -147,6 +147,7 @@
 
       document.querySelector("#movies").appendChild(item);
     }
+
     </script>
   </body>
 </html>
