@@ -22,20 +22,21 @@
          border-color: black;
          border-width: thin;
          height: 64px;
-         width: 200px; <!--giving some width to the container, will be width auto once streaming-->
+         width: 200px; <!--giving some width to the container, will be width auto once streaming?-->
          margin: auto;
        }
        .fa-5x{
          color:silver;
-
+         transition: all 0.3s ease 0s;
+       }
+       .fa-5x:hover{
+         color:rgb(75,162,29);
        }
        .player-icons{
          background-color:inherit;
-         transition: all 0.3s ease 0s;
+
         }
-       .player-icons:hover{
-         background-color:
-       }
+
      </style>
      <style media="screen">
      html {
@@ -137,18 +138,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-    <script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
-    <script>
-      SC.initialize({
-        client_id: "YOUR_CLIENT_ID",
-        redirect_uri: "http://example.com/callback",
-      });
-
-      SC.stream("/tracks/293", function(sound){
-        sound.play();
-      });
-    </script>
-
   </head>
   <body>
     <header>
@@ -168,6 +157,10 @@
           <button class=player-icons type="button"><i class="fa fa-step-forward fa-5x"></i></button>
         </li>
 
+        <audio src="https://api.soundcloud.com/tracks/180161935/stream">
+
+        </audio>
+
       </ul>
     </header>
     <main>
@@ -182,9 +175,43 @@
       SC.oEmbed("http://soundcloud.com/forss/sets/soulhack", {color: "ff0066"},  document.getElementById("putTheWidgetHere"));
     </script> -->
     </main>
+  <script src="https://connect.soundcloud.com/sdk-2.0.0.js"></script>
+  <script>
+    var clientID = "8c9ac2d34f26fe5d688b50c291641dd9";
 
-  <script type="text/javascript">
+    SC.initialize({ client_id: clientID });
 
+    var allTracks = [];
+
+    SC.get("/groups/55517/tracks", {limit: 1}, function(tracks){
+      var streamURL = tracks[0].stream_url + "?client_id=" + clientID;
+      allTracks.push(streamURL);
+      $("audio").attr("src", tracks[0].stream_url + "?client_id=" + clientID);
+    });
+
+    $("fa-play").click(player)
+
+    function player(sound){
+      
+    }
+
+    // var track_url = 'https://soundcloud.com/jm00d/sets/dark';
+    // SC.oEmbed(track_url, { auto_play: true }, function(oEmbed) {
+    //   console.log('oEmbed response: ' + oEmbed);
+    // });
+    // $(document).ready(function() {
+    //   SC.stream('/tracks/293', function(sound) {
+    //     debugger;
+    //   //   $(".fa-play").click(function(e) {
+    //   //   e.preventDefault();
+    //   //   sound.start();
+    //   //   });
+    //   // $(".fa-step-backward").click(function(e) {
+    //   //   e.preventDefault();
+    //   //   sound.stop();
+    //   //   });
+    //   });
+    // });
   </script>
   <script type="text/javascript">
   var t = 1;
